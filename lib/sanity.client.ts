@@ -9,5 +9,5 @@ export const client = createClient({
     projectId,
     dataset,
     apiVersion,
-    useCdn: false, // `false` if you want to ensure fresh data but if vercel is used, it will be true
+    useCdn: true, // `false` if you want to ensure fresh data but if vercel is used, it will be true
     });

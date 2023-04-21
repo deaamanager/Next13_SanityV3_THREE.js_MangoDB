@@ -143,7 +143,7 @@ function Projects({ projects}: Props) {
     <div className='relative h-screen w-full bg-black flex flex-col justify-center items-center'>
       <ProjectsBackground />
 
-      <div className='absolute top-[15rem]  w-full flex '>
+      <div className='absolute top-[8rem]  w-full flex '>
         {/*absolute top-[10rem] */}
        <SliderCard projects={projects} />
       </div>
