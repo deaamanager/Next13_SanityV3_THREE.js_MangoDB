@@ -1,27 +1,69 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer utilities {
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.btnanimate{
+animation: btnanimtion 8s linear infinite;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes btnanimtion{
+  0%, 50%, 100%{
+  opacity: 1;
+  }
+  25%{
+   opacity: 0.4;
+  }
+  75%{
+    opacity: 0.7;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btnCard{ 
+  @apply btnanimate 
 }
+
+
+
+.boxshadow{
+   box-shadow: 0 0 5px #4b9ae3,
+               0 0 25px #4b9ae3,
+               0 0 50px #4b9ae3,
+               0 0 100px 
+  }
+    .link{
+   @apply text-[#4b9ae3] uppercase tracking-[4px]
+   text-base ring-4 ring-opacity-50 ring-[#4b9ae3] px-6
+   py-2 rounded-full backdrop-brightness-50 my-3
+ }
+  
+ .link:hover{
+    @apply text-[#fff] bg-[#4b9ae3]
+    boxshadow opacity-80
+
+  }
+
+  .boxabout{ animation: animate 1.5s    infinite ;  }
+
+ @keyframes animate{
+ 
+  0%{
+    box-shadow: 0 0 0  ;               
+  }
+  100%{
+    box-shadow: 0 0 1px #4b9ae3,  /* or #4b9ae3 */
+                0 0 10px #4b9ae3,
+                0 0 35px #4b9ae3;
+               
+  }
+}
+
+.about-box-shadow{
+    @apply  boxabout  
+  }
+}
+
+
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
